@@ -1,5 +1,2 @@
 
-"ksye616@gmail.com"
-"ksye616@gmail.com"
-"ksye616@gmail.com"
-"ksye616@gmail.com"
+{"email":"test.kadai20201216@gmail.com","password":"123456"}

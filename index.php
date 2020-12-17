@@ -36,13 +36,7 @@
         $('#modalopen').on('click', function() {
             $('#modal').fadeIn(200);
         });
-        $('#signup').on('click', function() {
-            if ($('#createmail').val() != '' && $('#creatpass').val() != '') {
-                alert('アカウント作成');
-            } else {
-                alert('値を入力してください');
-            };
-        });
+        
     </script>
 </body>
 
