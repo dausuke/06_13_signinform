@@ -33,7 +33,7 @@ form{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -65,11 +65,33 @@ button{
 button:hover {
   background: #1ec7bb;
 }
+#next2{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    height: 3rem;
+    width: 7rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0.25em 0.5em;
+    color: #FFF;
+    background: #3f51b5;
+    transition: .4s;
+    border: 1px solid #3f51b5;
+}
+#next2:hover {
+  background: #1ec7bb;
+  border: 1px solid #1ec7bb;
+}
 .none{
     display: none;
 }
-#fadein-content{
-    width: 100%;
+#userdata{
+    width: 80%;
+    height: 100%;
+    display: none;
+}
+#sigindata{
+    width: 80%;
     height: 100%;
     display: none;
 }
