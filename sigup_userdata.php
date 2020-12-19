@@ -10,7 +10,7 @@ $password = $_POST['password'];
 $signup_data = array('email' => $email, 'password' => $password);
 
 //他の情報をユーザー情報管理のため連想配列に格納
-$user_data = array('name' => $name, 'age' =>$age, 'city' => $city);
+$user_data = array('name' => $name, 'age' =>$age, 'city' => $city, 'email'=>$email);
 
 //受信したデータをjson形式へエンコード
 $json_sigin_data = json_encode($signup_data);

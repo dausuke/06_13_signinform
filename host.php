@@ -14,6 +14,7 @@ fclose($file);
 //年齢、都道府県のデータを取り出し、$ageと$cityに格納
 $age = array_column($user_data_array, '1');
 $city = array_column($user_data_array, '2');
+$email = array_column($user_data_array, '3');
 
 // 作成した配列を出力
-print_r($city);
+print_r($email);

@@ -118,6 +118,12 @@ mb_send_mail($to, $subject, $message, $headers);
         </div>
     </form>
     <script>
+        //送信キャンセル
+        function nosubmit() {
+            $('form').submit(function() {
+                return false;
+            });
+        };
         //認証コード判定
         $('#next').on('click', function() {
             const createnumber = $('#createnumber').val();
@@ -128,6 +134,16 @@ mb_send_mail($to, $subject, $message, $headers);
             } else {
                 alert('認証コードが違います')
             }
+        });
+        //年齢入力画面は半角表示
+        $('#age').on('input', function(e) {
+            let value = $(e.currentTarget).val();
+            value = value
+                .replace(/[０-９]/g, function(s) {
+                    return String.fromCharCode(s.charCodeAt(0) - 65248);
+                })
+                .replace(/[^0-9]/g, '');
+            $(e.currentTarget).val(value);
         });
         //入力判定を行い、パスワード設定画面へ
         $('#next2').on('click', function() {
@@ -147,7 +163,8 @@ mb_send_mail($to, $subject, $message, $headers);
             if ($('#password').val() != '' && $('#email').val() != '') {
                 alert('アカウント作成');
             } else {
-                alert('パスワード入力してください');
+                alert('パスワードを入力してください');
+                nosubmit()
             };
         });
     </script>
